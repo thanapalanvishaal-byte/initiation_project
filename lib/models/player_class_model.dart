@@ -6,7 +6,8 @@ class PlayerClass {
   final String description;
   final String focus;
   final String ability;
-  final IconData icon;
+  final String iconPath;
+  final bool iconIsSelfContained;
   final Color color;
 
   const PlayerClass({
@@ -15,7 +16,8 @@ class PlayerClass {
     required this.description,
     required this.focus,
     required this.ability,
-    required this.icon,
+    required this.iconPath,
+    this.iconIsSelfContained = false,
     required this.color,
   });
 
@@ -26,7 +28,8 @@ class PlayerClass {
       description: 'Masters of close combat and physical prowess',
       focus: 'Focus: Strength & Vitality',
       ability: 'Direct confrontation, high damage output',
-      icon: Icons.sports_martial_arts,
+      iconPath: 'assets/icons/sword.svg',
+      iconIsSelfContained: true,
       color: Color(0xFFFF5A36),
     ),
     PlayerClass(
@@ -35,7 +38,7 @@ class PlayerClass {
       description: 'Swift and deadly, striking from the shadows',
       focus: 'Focus: Agility & Precision',
       ability: 'Speed-based attacks, critical strikes',
-      icon: Icons.gps_fixed,
+      iconPath: 'assets/icons/circle.svg',
       color: Color(0xFFD946EF),
     ),
     PlayerClass(
@@ -44,7 +47,7 @@ class PlayerClass {
       description: 'Wielders of arcane power and devastating spells',
       focus: 'Focus: Intelligence & Mana',
       ability: 'Ranged magic attacks, crowd control',
-      icon: Icons.bolt,
+      iconPath: 'assets/icons/lighting_bolt_02.svg',
       color: Color(0xFF3B82F6),
     ),
     PlayerClass(
@@ -53,7 +56,7 @@ class PlayerClass {
       description: 'Immovable defenders who protect allies',
       focus: 'Focus: Defense & Endurance',
       ability: 'Damage absorption, team protection',
-      icon: Icons.shield,
+      iconPath: 'assets/icons/shield.svg',
       color: Color(0xFF10B981),
     ),
     PlayerClass(
@@ -62,7 +65,7 @@ class PlayerClass {
       description: 'Tactical geniuses who outthink their opponents',
       focus: 'Focus: Intelligence & Perception',
       ability: 'Buff allies, debuff enemies, analyze weaknesses',
-      icon: Icons.psychology,
+      iconPath: 'assets/icons/brain.svg',
       color: Color(0xFFF59E0B),
     ),
   ];
