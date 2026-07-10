@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import '../screens/onboarding/awakening_screen.dart';
+import '../screens/onboarding/awakening_screen_01.dart';
+import '../screens/onboarding/awakening_screen_02.dart';
+import '../screens/onboarding/awakening_screen_03.dart';
 
 class AppRouter {
   static final GoRouter router = GoRouter(
@@ -14,9 +16,12 @@ class AppRouter {
       GoRoute(
         path: '/create-profile',
         name: 'createProfile',
-        builder: (context, state) => const Scaffold(
-          body: Center(child: Text('Create Profile - Coming Soon')),
-        ),
+        builder: (context, state) => const AwakeningStepTwo(),
+      ),
+      GoRoute(
+        path: '/select-path',
+        name: 'selectPath',
+        builder: (context, state) => const AwakeningStepThree(),
       ),
     ],
   );
