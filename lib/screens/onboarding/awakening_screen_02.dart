@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
+import '../../themes/app_typography.dart';
 import '../../providers/onboarding_provider.dart';
 import '../../widgets/onboarding_page_indicator.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -53,7 +53,7 @@ class AwakeningStepTwo extends StatelessWidget {
                     child: Text(
                       'CREATE PROFILE',
                       textAlign: TextAlign.center,
-                      style: GoogleFonts.orbitron(
+                      style: AppTypography.orbitron(
                         color: Colors.white,
                         fontSize: 26.sp,
                         fontWeight: FontWeight.w700,
@@ -66,7 +66,7 @@ class AwakeningStepTwo extends StatelessWidget {
 
                   Text(
                     'Register your identity with the System',
-                    style: GoogleFonts.chakraPetch(color: Colors.white54, fontSize: 13.sp),
+                    style: AppTypography.chakraPetch(color: Colors.white54, fontSize: 13.sp),
                   ),
 
                   SizedBox(height: 32.h),
@@ -77,7 +77,7 @@ class AwakeningStepTwo extends StatelessWidget {
                     alignment: Alignment.centerLeft,
                     child: Text(
                       'HUNTER NAME',
-                      style: GoogleFonts.orbitron(
+                      style: AppTypography.orbitron(
                         color: Colors.white70,
                         fontSize: 11.sp,
                         letterSpacing: 1,
@@ -89,11 +89,11 @@ class AwakeningStepTwo extends StatelessWidget {
                   Consumer<OnboardingProvider>(
                     builder: (context, provider, _) {
                       return TextField(
-                        style: GoogleFonts.chakraPetch(color: Colors.white, fontSize: 15.sp),
+                        style: AppTypography.chakraPetch(color: Colors.white, fontSize: 15.sp),
                         onChanged: (value) => provider.setHunterName(value),
                         decoration: InputDecoration(
                           hintText: 'Enter your name',
-                          hintStyle: GoogleFonts.chakraPetch(color: Colors.white38, fontSize: 15.sp),
+                          hintStyle: AppTypography.chakraPetch(color: Colors.white38, fontSize: 15.sp),
                           filled: true,
                           fillColor: const Color(0xFF161320),
                           contentPadding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 14.h),
@@ -116,7 +116,7 @@ class AwakeningStepTwo extends StatelessWidget {
                   SizedBox(height: 6.h),
                   Text(
                     'This name will be displayed throughout your journey',
-                    style: GoogleFonts.chakraPetch(color: Colors.white38, fontSize: 11.sp),
+                    style: AppTypography.chakraPetch(color: Colors.white38, fontSize: 11.sp),
                   ),
 
                   SizedBox(height: 20.h),
@@ -155,7 +155,7 @@ class AwakeningStepTwo extends StatelessWidget {
                       children: [
                         Text(
                           'CONTINUE',
-                          style: GoogleFonts.chakraPetch(
+                          style: AppTypography.chakraPetch(
                             color: Colors.white,
                             fontSize: 14.sp,
                             letterSpacing: 1,
@@ -216,7 +216,7 @@ class _InfoBox extends StatelessWidget {
         children: [
           Text(
             title,
-            style: GoogleFonts.orbitron(
+            style: AppTypography.orbitron(
               color: titleColor,
               fontSize: 11.sp,
               letterSpacing: 0.6,
@@ -225,7 +225,7 @@ class _InfoBox extends StatelessWidget {
           SizedBox(height: 6.h),
           Text(
             body,
-            style: GoogleFonts.chakraPetch(color: const Color(0xFFD1D5DC), fontSize: 12.sp, height: 1.4),
+            style: AppTypography.chakraPetch(color: const Color(0xFFD1D5DC), fontSize: 12.sp, height: 1.4),
           ),
         ],
       ),

@@ -12,24 +12,28 @@ class AppColors {
 
 class AppTextStyles {
   static const TextStyle heading1 = TextStyle(
+    fontFamily: 'Orbitron',
     fontSize: 28,
     fontWeight: FontWeight.bold,
     color: AppColors.textPrimary,
   );
 
   static const TextStyle heading2 = TextStyle(
+    fontFamily: 'Orbitron',
     fontSize: 22,
     fontWeight: FontWeight.w600,
     color: AppColors.textPrimary,
   );
 
   static const TextStyle body = TextStyle(
+    fontFamily: 'ChakraPetch',
     fontSize: 16,
     fontWeight: FontWeight.normal,
     color: AppColors.textPrimary,
   );
 
   static const TextStyle caption = TextStyle(
+    fontFamily: 'ChakraPetch',
     fontSize: 12,
     fontWeight: FontWeight.normal,
     color: AppColors.textSecondary,

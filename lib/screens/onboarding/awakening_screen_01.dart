@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:go_router/go_router.dart';
+import '../../themes/app_typography.dart';
 import '../../widgets/onboarding_page_indicator.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -104,7 +104,7 @@ class AwakeningScreen extends StatelessWidget {
                                     SizedBox(width: 8.w),
                                     Text(
                                       "SYSTEM NOTIFICATION",
-                                      style: GoogleFonts.orbitron(
+                                      style: AppTypography.orbitron(
                                         color: const Color(0xFFDABEFF),
                                         fontSize: 12.sp,
                                         letterSpacing: .8,
@@ -130,7 +130,7 @@ class AwakeningScreen extends StatelessWidget {
                                 child: Text(
                                   "YOU HAVE BEEN\nSELECTED",
                                   textAlign: TextAlign.center,
-                                  style: GoogleFonts.orbitron(
+                                  style: AppTypography.orbitron(
                                     color: Colors.white,
                                     fontSize: 52.sp,
                                     height: 0.98,
@@ -144,7 +144,7 @@ class AwakeningScreen extends StatelessWidget {
                               Text(
                                 "You have been chosen as a Player.",
                                 textAlign: TextAlign.center,
-                                style: GoogleFonts.chakraPetch(
+                                style: AppTypography.chakraPetch(
                                   color: _bodyPrimary,
                                   fontSize: 16.sp,
                                   height: 1.2,
@@ -158,7 +158,7 @@ class AwakeningScreen extends StatelessWidget {
                                 child: Text(
                                   "Complete awakening to unlock unlimited growth potential.",
                                   textAlign: TextAlign.center,
-                                  style: GoogleFonts.chakraPetch(
+                                  style: AppTypography.chakraPetch(
                                     color: _bodySecondary,
                                     fontSize: 15.sp,
                                     height: 1.45,
@@ -200,7 +200,7 @@ class AwakeningScreen extends StatelessWidget {
                                     },
                                     child: Text(
                                       "START AWAKENING",
-                                      style: GoogleFonts.chakraPetch(
+                                      style: AppTypography.chakraPetch(
                                         color: const Color(0xFFE5E7EB),
                                         fontSize: 17.sp,
                                         letterSpacing: .9,
@@ -215,7 +215,7 @@ class AwakeningScreen extends StatelessWidget {
                               Text(
                                 "The System is watching. The System is waiting.",
                                 textAlign: TextAlign.center,
-                                style: GoogleFonts.chakraPetch(
+                                style: AppTypography.chakraPetch(
                                   color: _hintText,
                                   fontSize: 13.sp,
                                 ),

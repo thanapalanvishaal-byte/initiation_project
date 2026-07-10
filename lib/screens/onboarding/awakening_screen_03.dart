@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
+import '../../themes/app_typography.dart';
 import '../../models/player_class_model.dart';
 import '../../providers/onboarding_provider.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -28,7 +28,7 @@ class AwakeningStepThree extends StatelessWidget {
                 child: Text(
                   'SELECT YOUR\nPATH',
                   textAlign: TextAlign.center,
-                  style: GoogleFonts.orbitron(
+                  style: AppTypography.orbitron(
                     color: Colors.white,
                     fontSize: 30.sp,
                     fontWeight: FontWeight.w700,
@@ -40,7 +40,7 @@ class AwakeningStepThree extends StatelessWidget {
               Text(
                 'Choose your combat specialization. This determines your initial stat distribution.',
                 textAlign: TextAlign.center,
-                style: GoogleFonts.chakraPetch(color: Colors.white54, fontSize: 13.sp),
+                style: AppTypography.chakraPetch(color: Colors.white54, fontSize: 13.sp),
               ),
 
               SizedBox(height: 28.h),
@@ -67,7 +67,7 @@ class AwakeningStepThree extends StatelessWidget {
                   children: [
                     Text(
                       'NOTE',
-                      style: GoogleFonts.orbitron(
+                      style: AppTypography.orbitron(
                         color: const Color(0xFFC27AFF),
                         fontSize: 11.sp,
                         letterSpacing: 1,
@@ -76,7 +76,7 @@ class AwakeningStepThree extends StatelessWidget {
                     SizedBox(height: 8.h),
                     Text(
                       'Your class choice affects initial stats but does not limit your growth. All stats can be improved through training and quests.',
-                      style: GoogleFonts.chakraPetch(color: Colors.white60, fontSize: 13.sp, height: 1.5),
+                      style: AppTypography.chakraPetch(color: Colors.white60, fontSize: 13.sp, height: 1.5),
                     ),
                   ],
                 ),
@@ -116,7 +116,7 @@ class AwakeningStepThree extends StatelessWidget {
                         onPressed: canConfirm
                             ? () async {
                                 await provider.completeOnboarding();
-                                // TODO: navigate to home/dashboard once built
+                                // Navigation is intentionally deferred until the home/dashboard route exists.
                               }
                             : null,
                         child: Row(
@@ -124,7 +124,7 @@ class AwakeningStepThree extends StatelessWidget {
                           children: [
                             Text(
                               'CONFIRM SELECTION',
-                              style: GoogleFonts.chakraPetch(
+                              style: AppTypography.chakraPetch(
                                 color: Colors.white,
                                 fontSize: 14.sp,
                                 letterSpacing: 1,
@@ -224,7 +224,7 @@ class _ClassCard extends StatelessWidget {
                           children: [
                             Text(
                               playerClass.name.toUpperCase(),
-                              style: GoogleFonts.orbitron(
+                              style: AppTypography.orbitron(
                                 color: Colors.white,
                                 fontSize: 18.sp,
                                 fontWeight: FontWeight.w600,
@@ -233,7 +233,7 @@ class _ClassCard extends StatelessWidget {
                             SizedBox(height: 6.h),
                             Text(
                               playerClass.description,
-                              style: GoogleFonts.chakraPetch(color: Colors.white60, fontSize: 13.sp, height: 1.4),
+                              style: AppTypography.chakraPetch(color: Colors.white60, fontSize: 13.sp, height: 1.4),
                             ),
                             SizedBox(height: 14.h),
                             _Tag(text: playerClass.focus, color: const Color(0xFFD946EF)),
@@ -272,7 +272,7 @@ class _Tag extends StatelessWidget {
       ),
       child: Text(
         text,
-        style: GoogleFonts.chakraPetch(color: color, fontSize: 12.sp),
+        style: AppTypography.chakraPetch(color: color, fontSize: 12.sp),
       ),
     );
   }
