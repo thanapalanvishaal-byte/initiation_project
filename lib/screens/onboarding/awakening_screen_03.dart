@@ -208,10 +208,19 @@ class _ClassCard extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       playerClass.iconIsSelfContained
-    ? SvgPicture.asset(
-        playerClass.iconPath,
-        width: 80.w,
-        height: 80.w,
+    ? SizedBox(
+        width: 56.w,
+        height: 56.w,
+        child: OverflowBox(
+          maxWidth: 80.w,
+          maxHeight: 80.w,
+          alignment: Alignment.topCenter,
+          child: SvgPicture.asset(
+            playerClass.iconPath,
+            width: 80.w,
+            height: 80.w,
+          ),
+        ),
       )
     : Container(
         width: 56.w,

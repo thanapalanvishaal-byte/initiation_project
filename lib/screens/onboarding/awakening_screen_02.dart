@@ -46,22 +46,26 @@ class AwakeningStepTwo extends StatelessWidget {
 
                   //-------------------------------- Heading
 
-                  ShaderMask(
-                    shaderCallback: (bounds) => const LinearGradient(
-                      colors: [Color(0xFFC27AFF), Color(0xFF00D3F2)],
-                    ).createShader(bounds),
-                    child: Text(
-                      'CREATE PROFILE',
-                      textAlign: TextAlign.center,
-                      style: AppTypography.orbitron(
-                        color: Colors.white,
-                        fontSize: 30.sp,
-                        fontWeight: FontWeight.w400,
-                        height: 36 / 30,
-                        letterSpacing: 1.5,
-                      ),
-                    ),
-                  ),
+                  FittedBox(
+  fit: BoxFit.scaleDown,
+  child: ShaderMask(
+    shaderCallback: (bounds) => const LinearGradient(
+      colors: [Color(0xFFC27AFF), Color(0xFF00D3F2)],
+    ).createShader(bounds),
+    child: Text(
+      'CREATE PROFILE',
+      textAlign: TextAlign.center,
+      maxLines: 1,
+      style: AppTypography.orbitron(
+        color: Colors.white,
+        fontSize: 30.sp,
+        fontWeight: FontWeight.w400,
+        height: 36 / 30,
+        letterSpacing: 1.5,
+      ),
+    ),
+  ),
+),
 
                   SizedBox(height: 10.h),
 
