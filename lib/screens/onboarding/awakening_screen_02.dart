@@ -55,9 +55,10 @@ class AwakeningStepTwo extends StatelessWidget {
                       textAlign: TextAlign.center,
                       style: AppTypography.orbitron(
                         color: Colors.white,
-                        fontSize: 26.sp,
-                        fontWeight: FontWeight.w700,
-                        letterSpacing: 1.2,
+                        fontSize: 30.sp,
+                        fontWeight: FontWeight.w400,
+                        height: 36 / 30,
+                        letterSpacing: 1.5,
                       ),
                     ),
                   ),
@@ -66,7 +67,10 @@ class AwakeningStepTwo extends StatelessWidget {
 
                   Text(
                     'Register your identity with the System',
-                    style: AppTypography.chakraPetch(color: Colors.white54, fontSize: 13.sp),
+                    style: AppTypography.rajdhani(color: Colors.white54, fontSize: 14.sp,
+          fontWeight: FontWeight.w400,
+          height: 22.7 / 14,
+          ),
                   ),
 
                   SizedBox(height: 32.h),
@@ -79,8 +83,10 @@ class AwakeningStepTwo extends StatelessWidget {
                       'HUNTER NAME',
                       style: AppTypography.orbitron(
                         color: Colors.white70,
-                        fontSize: 11.sp,
-                        letterSpacing: 1,
+                        fontSize: 14.sp,
+                        fontWeight: FontWeight.w400,
+                        height: 20 / 14,
+                        letterSpacing: 0.35,
                       ),
                     ),
                   ),
@@ -114,10 +120,17 @@ class AwakeningStepTwo extends StatelessWidget {
                     },
                   ),
                   SizedBox(height: 6.h),
-                  Text(
-                    'This name will be displayed throughout your journey',
-                    style: AppTypography.chakraPetch(color: Colors.white38, fontSize: 11.sp),
-                  ),
+                  SizedBox(
+  width: double.infinity,
+  child: Text(
+    'This name will be displayed throughout your journey',
+    textAlign: TextAlign.start,
+    style: AppTypography.rajdhani(color: Colors.white38, fontSize: 12.sp,
+          fontWeight: FontWeight.w400,
+          height: 19.5 / 12,
+          ),
+  ),
+),
 
                   SizedBox(height: 20.h),
 
@@ -155,10 +168,12 @@ class AwakeningStepTwo extends StatelessWidget {
                       children: [
                         Text(
                           'CONTINUE',
-                          style: AppTypography.chakraPetch(
+                          style: AppTypography.orbitron(
                             color: Colors.white,
-                            fontSize: 14.sp,
-                            letterSpacing: 1,
+                            fontSize: 16.sp,
+                            letterSpacing: 0.8,
+                            height: 24 / 16,
+                            fontWeight: FontWeight.w400,
                           ),
                         ),
                         SizedBox(width: 8.w),
@@ -216,10 +231,12 @@ class _InfoBox extends StatelessWidget {
         children: [
           Text(
             title,
-            style: AppTypography.orbitron(
+            style: AppTypography.rajdhani(
               color: titleColor,
-              fontSize: 11.sp,
-              letterSpacing: 0.6,
+              fontSize: 12.sp,
+              fontWeight: FontWeight.w400,
+              height: 16 / 12,
+              letterSpacing: 0.3,
             ),
           ),
           SizedBox(height: 6.h),

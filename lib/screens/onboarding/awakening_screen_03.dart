@@ -5,6 +5,7 @@ import '../../themes/app_typography.dart';
 import '../../models/player_class_model.dart';
 import '../../providers/onboarding_provider.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import '../../widgets/onboarding_page_indicator.dart';
 
 class AwakeningStepThree extends StatelessWidget {
   const AwakeningStepThree({super.key});
@@ -31,8 +32,9 @@ class AwakeningStepThree extends StatelessWidget {
                   style: AppTypography.orbitron(
                     color: Colors.white,
                     fontSize: 30.sp,
-                    fontWeight: FontWeight.w700,
-                    height: 1.2,
+                    fontWeight: FontWeight.w400,
+                    height: 36/30,
+                    letterSpacing: 1.5,
                   ),
                 ),
               ),
@@ -40,7 +42,7 @@ class AwakeningStepThree extends StatelessWidget {
               Text(
                 'Choose your combat specialization. This determines your initial stat distribution.',
                 textAlign: TextAlign.center,
-                style: AppTypography.chakraPetch(color: Colors.white54, fontSize: 13.sp),
+                style: AppTypography.rajdhani(color: Colors.white54, fontSize: 14.sp, height: 22.7 / 14,fontWeight: FontWeight.w400,),
               ),
 
               SizedBox(height: 28.h),
@@ -67,16 +69,18 @@ class AwakeningStepThree extends StatelessWidget {
                   children: [
                     Text(
                       'NOTE',
-                      style: AppTypography.orbitron(
+                      style: AppTypography.rajdhani(
                         color: const Color(0xFFC27AFF),
-                        fontSize: 11.sp,
-                        letterSpacing: 1,
+                        fontSize: 12.sp,
+                        height: 16 / 12,
+                        fontWeight: FontWeight.w400,
+                        letterSpacing: 0.3,
                       ),
                     ),
                     SizedBox(height: 8.h),
                     Text(
                       'Your class choice affects initial stats but does not limit your growth. All stats can be improved through training and quests.',
-                      style: AppTypography.chakraPetch(color: Colors.white60, fontSize: 13.sp, height: 1.5),
+                      style: AppTypography.rajdhani(color: Colors.white60, fontSize: 14.sp, height: 22.7 / 14, fontWeight: FontWeight.w400),
                     ),
                   ],
                 ),
@@ -124,10 +128,12 @@ class AwakeningStepThree extends StatelessWidget {
                           children: [
                             Text(
                               'CONFIRM SELECTION',
-                              style: AppTypography.chakraPetch(
+                              style: AppTypography.orbitron(
                                 color: Colors.white,
-                                fontSize: 14.sp,
-                                letterSpacing: 1,
+                                fontSize: 16.sp,
+                                letterSpacing: 0.8,
+                                height: 24 / 16,
+                                fontWeight: FontWeight.w400,
                               ),
                             ),
                             SizedBox(width: 8.w),
@@ -139,6 +145,9 @@ class AwakeningStepThree extends StatelessWidget {
                   );
                 },
               ),
+
+              SizedBox(height: 30.h),
+              const OnboardingPageIndicator(currentPage: 2, totalPages: 4),
 
               SizedBox(height: 30.h),
             ],

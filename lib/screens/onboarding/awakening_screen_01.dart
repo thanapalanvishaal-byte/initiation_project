@@ -107,7 +107,9 @@ class AwakeningScreen extends StatelessWidget {
                                       style: AppTypography.orbitron(
                                         color: const Color(0xFFDABEFF),
                                         fontSize: 12.sp,
-                                        letterSpacing: .8,
+                                        fontWeight: FontWeight.w400,
+                                        height: 16 / 12,
+                                        letterSpacing: 0.6,
                                       ),
                                     )
                                   ],
@@ -118,36 +120,67 @@ class AwakeningScreen extends StatelessWidget {
 
                     //-------------------------------- Heading
 
-                              ShaderMask(
-                                shaderCallback: (bounds) {
-                                  return const LinearGradient(
-                                    colors: [
-                                      _headlineStart,
-                                      _headlineEnd,
-                                    ],
-                                  ).createShader(bounds);
-                                },
-                                child: Text(
-                                  "YOU HAVE BEEN\nSELECTED",
-                                  textAlign: TextAlign.center,
-                                  style: AppTypography.orbitron(
-                                    color: Colors.white,
-                                    fontSize: 52.sp,
-                                    height: 0.98,
-                                    letterSpacing: 1.6,
-                                  ),
-                                ),
-                              ),
-
+                             Column(
+  children: [
+    ShaderMask(
+      shaderCallback: (bounds) {
+        return const LinearGradient(
+          begin: Alignment.centerLeft,
+          end: Alignment.centerRight,
+          colors: [
+            Color(0xFFC27AFF),
+            Color(0xFF00D3F2),
+          ],
+        ).createShader(bounds);
+      },
+      child: Text(
+        "YOU HAVE BEEN",
+        textAlign: TextAlign.center,
+        style: AppTypography.orbitron(
+          color: Colors.white,
+          fontSize: 30.sp,
+          fontWeight: FontWeight.w400,
+          height: 36 / 30,
+          letterSpacing: 1.5,
+        ),
+      ),
+    ),
+    ShaderMask(
+      shaderCallback: (bounds) {
+        return const LinearGradient(
+          begin: Alignment.centerLeft,
+          end: Alignment.centerRight,
+          colors: [
+            Color(0xFF00D3F2),
+            Color(0xFFC27AFF),
+          ],
+        ).createShader(bounds);
+      },
+      child: Text(
+        "SELECTED",
+        textAlign: TextAlign.center,
+        style: AppTypography.orbitron(
+          color: Colors.white,
+          fontSize: 30.sp,
+          fontWeight: FontWeight.w400,
+          height: 36 / 30,
+          letterSpacing: 1.5,
+        ),
+      ),
+    ),
+  ],
+),
                               SizedBox(height: 18.h),
 
                               Text(
                                 "You have been chosen as a Player.",
                                 textAlign: TextAlign.center,
-                                style: AppTypography.chakraPetch(
+                                style: AppTypography.rajdhani(
                                   color: _bodyPrimary,
                                   fontSize: 16.sp,
-                                  height: 1.2,
+                                  fontWeight: FontWeight.w400,
+                                  height: 26 / 16,
+                                  
                                 ),
                               ),
 
@@ -158,10 +191,12 @@ class AwakeningScreen extends StatelessWidget {
                                 child: Text(
                                   "Complete awakening to unlock unlimited growth potential.",
                                   textAlign: TextAlign.center,
-                                  style: AppTypography.chakraPetch(
+                                  style: AppTypography.rajdhani(
                                     color: _bodySecondary,
-                                    fontSize: 15.sp,
-                                    height: 1.45,
+                                    fontSize: 14.sp,
+                                    fontWeight: FontWeight.w400,
+                                    height: 22.7 / 14,
+                                    
                                   ),
                                 ),
                               ),
@@ -172,6 +207,7 @@ class AwakeningScreen extends StatelessWidget {
 
                               Container(
                                 height: 62.h,
+                                width: double.infinity,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(18),
                                   gradient: const LinearGradient(
@@ -200,10 +236,12 @@ class AwakeningScreen extends StatelessWidget {
                                     },
                                     child: Text(
                                       "START AWAKENING",
-                                      style: AppTypography.chakraPetch(
+                                      style: AppTypography.orbitron(
                                         color: const Color(0xFFE5E7EB),
-                                        fontSize: 17.sp,
-                                        letterSpacing: .9,
+                                        fontSize: 16.sp,
+                                        fontWeight: FontWeight.w400,
+                                        height: 24 / 16,
+                                        letterSpacing: 0.8,
                                       ),
                                     ),
                                   ),
@@ -215,9 +253,10 @@ class AwakeningScreen extends StatelessWidget {
                               Text(
                                 "The System is watching. The System is waiting.",
                                 textAlign: TextAlign.center,
-                                style: AppTypography.chakraPetch(
+                                style: AppTypography.rajdhani(
                                   color: _hintText,
-                                  fontSize: 13.sp,
+                                  fontSize: 12.sp,
+                                  height: 19.5 / 12,
                                 ),
                               ),
 

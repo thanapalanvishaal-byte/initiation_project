@@ -42,4 +42,24 @@ class AppTypography {
       decoration: decoration,
     );
   }
+  static TextStyle rajdhani({
+  Color? color,
+  double? fontSize,
+  FontWeight? fontWeight,
+  double? letterSpacing,
+  double? height,
+  FontStyle? fontStyle,
+  TextDecoration? decoration,
+}) {
+  return TextStyle(
+    fontFamily: 'Rajdhani',
+    color: color,
+    fontSize: fontSize,
+    fontWeight: fontWeight,
+    letterSpacing: letterSpacing,
+    height: height,
+    fontStyle: fontStyle,
+    decoration: decoration,
+  );
+}
 }

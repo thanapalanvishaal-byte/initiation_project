@@ -13,29 +13,35 @@ class AppColors {
 class AppTextStyles {
   static const TextStyle heading1 = TextStyle(
     fontFamily: 'Orbitron',
-    fontSize: 28,
-    fontWeight: FontWeight.bold,
+    fontSize: 20,
+    height: 28/20,
+    letterSpacing: 1,
+    fontWeight: FontWeight.w400,
     color: AppColors.textPrimary,
   );
 
   static const TextStyle heading2 = TextStyle(
-    fontFamily: 'Orbitron',
-    fontSize: 22,
-    fontWeight: FontWeight.w600,
+    fontFamily: 'rajdhani',
+    fontSize: 14,
+    height: 22.7/14,
+    
+    fontWeight: FontWeight.w400,
     color: AppColors.textPrimary,
   );
 
   static const TextStyle body = TextStyle(
-    fontFamily: 'ChakraPetch',
-    fontSize: 16,
-    fontWeight: FontWeight.normal,
+    fontFamily: 'rajdhani',
+    fontSize: 12,
+    height: 16/12,
+    fontWeight: FontWeight.w400,
     color: AppColors.textPrimary,
   );
 
   static const TextStyle caption = TextStyle(
-    fontFamily: 'ChakraPetch',
+    fontFamily: 'rajdhani',
     fontSize: 12,
-    fontWeight: FontWeight.normal,
+    height: 16/12,
+    fontWeight: FontWeight.w400,
     color: AppColors.textSecondary,
   );
 }
